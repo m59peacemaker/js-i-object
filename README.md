@@ -20,17 +20,17 @@ var GetObject = require('i-object');
 var getObject = GetObject(options);
 ```
 
-### GetObject(options);
+### GetObject(options)
 
 - `options: object`
   - `iterateProps: boolean, false` | will also interact with object properties and flatten objects
-- *returns*: `object`
+- **returns**: `object`
 
 ### getObject(input, ...params)
 
 - `input: object, function, array` | Input to be used to find objects.
 - `...params`: Any amount of anything that will be passed into functions within `input`.
-- *returns*: `object`
+- **returns**: `object`
 
 See [tests](https://github.com/m59peacemaker/js-i-object/blob/master/test/index.js).
 
