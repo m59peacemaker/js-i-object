@@ -9,16 +9,16 @@ function thing(input) {
       _arguments = arguments;
 
   if (!Array.isArray(input)) {
-    return parseItem.apply(this, arguments);
+    return handleItem.apply(this, arguments);
   }
   var objects = input.map(function (item) {
-    return parseItem.apply(_this, [item].concat([].slice.call(_arguments, 1)));
+    return handleItem.apply(_this, [item].concat([].slice.call(_arguments, 1)));
   });
   objects.unshift({});
   return merge.apply(null, objects);
 }
 
-function parseItem(_x) {
+function handleItem(_x) {
   var _this2 = this,
       _arguments2 = arguments;
 

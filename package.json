@@ -18,7 +18,8 @@
   },
   "scripts": {
     "test": "npm run dist && node test",
-    "dist": "babel src/index.js > build/index.js"
+    "dist": "babel src/index.js > build/index.js",
+    "prepublish": "npm test"
   },
   "author": {
     "name": "Johnny Hauser",
