@@ -6,8 +6,6 @@ It even does. It objects from an object, function, or array of objects, function
 
 Functions can return anything mentioned above. Recursive stuff happens and an object is produced. Don't think about it. Just pass stuff in, return stuff from functions, and get an object.
 
-This module doesn't iterate object properties, so `{foo: 1', bar: {foo: 2}}` won't merge the nested object or interact with an array or function nested in an object.
-
 ![I object!](https://raw.githubusercontent.com/m59peacemaker/js-i-object/master/i-object.jpg "I object!")
 
 ## Install
@@ -15,11 +13,24 @@ This module doesn't iterate object properties, so `{foo: 1', bar: {foo: 2}}` won
 npm install i-object
 ```
 
-## module(input, ...params)
+## API
 
-Any parameters after `input` will be passed to functions found in `input`.
+```javascript
+var GetObject = require('i-object');
+var getObject = GetObject(options);
+```
 
-## Usage
+### GetObject(options);
+
+- `options: object`
+  - `iterateProps: boolean, false` | will also interact with object properties and flatten objects
+- *returns*: `object`
+
+### getObject(input, ...params)
+
+- `input: object, function, array` | Input to be used to find objects.
+- `...params`: Any amount of anything that will be passed into functions within `input`.
+- *returns*: `object`
 
 See [tests](https://github.com/m59peacemaker/js-i-object/blob/master/test/index.js).
 

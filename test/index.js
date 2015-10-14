@@ -1,9 +1,11 @@
 var test = require('tape');
-var thing = require('../build');
+
+var GetObject = require('../build');
+var getObject = GetObject();
 
 test('accepts a function and calls it with correct arguments', function(t) {
   t.plan(2);
-  thing(function(a, b) {
+  getObject(function(a, b) {
     t.equal(a, 'foo');
     t.equal(b, 'bar');
   }, 'foo', 'bar');
@@ -11,7 +13,7 @@ test('accepts a function and calls it with correct arguments', function(t) {
 
 test('applies to function return value', function(t) {
   t.plan(1);
-  var result = thing(function() {
+  var result = getObject(function() {
     return [function() {
       return {a: 'foo'}
     }];
@@ -21,10 +23,10 @@ test('applies to function return value', function(t) {
 
 test('accepts function and returns object', function(t) {
   t.plan(2);
-  t.deepEqual(thing(function() {
+  t.deepEqual(getObject(function() {
     return {a: 'foo'};
   }), {a: 'foo'});
-  t.deepEqual(thing(function() {}), {});
+  t.deepEqual(getObject(function() {}), {});
 });
 
 test('accepts array of functions and calls them with correct arguments', function(t) {
@@ -33,12 +35,12 @@ test('accepts array of functions and calls them with correct arguments', functio
     t.equal(a, 'foo');
     t.equal(b, 'bar');
   };
-  thing([fn, fn], 'foo', 'bar');
+  getObject([fn, fn], 'foo', 'bar');
 });
 
 test('accepts array of objects/functions and merges resulting objects', function(t) {
   t.plan(1);
-  var result = thing([
+  var result = getObject([
     {
       a: 'foo',
       b: 'bar',
@@ -62,7 +64,7 @@ test('accepts array of objects/functions and merges resulting objects', function
 
 test('works recurivsely (nested arrays, function returns)', function(t) {
   t.plan(1);
-  var result = thing([
+  var result = getObject([
     {
       a: 'foo',
       b: 'bar',
@@ -92,5 +94,36 @@ test('works recurivsely (nested arrays, function returns)', function(t) {
     c: 'qiz',
     d: 'qux',
     e: 'eek'
+  });
+});
+
+test('can optionally act on object properties', function(t) {
+  t.plan(1);
+  var getObject = GetObject({
+    iterateProps: true
+  });
+  var result = getObject({
+    foo: 'a',
+    bar: 'b',
+    qux: 123,
+    car: {
+      bar: 'b2',
+      car: 'c',
+    },
+    baz: function() {
+      return {foo: 'a2'};
+    },
+    biz: [{
+      foo: {
+        foh: 'x'
+      }
+    }]
+  });
+  t.deepEqual(result, {
+    foo: 'a2',
+    bar: 'b2',
+    qux: 123,
+    car: 'c',
+    foh: 'x'
   });
 });
