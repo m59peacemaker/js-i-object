@@ -1,0 +1,28 @@
+{
+  "name": "object-thing",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [
+    "object",
+    "function",
+    "array",
+    "recursive",
+    "merge"
+  ],
+  "main": "dist/index.js",
+  "dependencies": {
+    "lodash": "^3.10.1"
+  },
+  "devDependencies": {
+    "tape": "^4.2.1"
+  },
+  "scripts": {
+    "test": "npm run dist && node test",
+    "dist": "babel src/index.js > build/index.js"
+  },
+  "author": {
+    "name": "Johnny Hauser",
+    "email": "johnnyhauser@gmail.com"
+  },
+  "license": "VOL"
+}
