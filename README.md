@@ -1,10 +1,12 @@
 # i-object
 
-> Bro, does it even object? 
+> Bro, does it even object?
 
-It even does. It objects from objects, functions, and arrays of objects and functions. Pass any of that stuff and get back a merged object.
+It even does. It objects from an object, function, or array of objects, functions, and said arrays. Pass any of that stuff and get back a merged object.
 
 Functions can return anything mentioned above. Recursive stuff happens and an object is produced. Don't think about it. Just pass stuff in, return stuff from functions, and get an object.
+
+This module doesn't iterate object properties, so `{foo: 1', bar: {foo: 2}}` won't merge the nested object or interact with an array or function nested in an object.
 
 ![I object!](https://raw.githubusercontent.com/m59peacemaker/js-i-object/master/i-object.jpg "I object!")
 
