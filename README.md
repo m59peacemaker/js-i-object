@@ -19,7 +19,7 @@ Any parameters after `input` will be passed to functions found in `input`.
 
 ## Usage
 
-See [tests](https://github.com/m59peacemaker/js-i-object/tree/master/test).
+See [tests](https://github.com/m59peacemaker/js-i-object/blob/master/test/index.js).
 
 ## License
 
