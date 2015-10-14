@@ -1,13 +1,14 @@
 {
-  "name": "object-thing",
+  "name": "i-object",
   "version": "1.0.0",
-  "description": "",
+  "description": "Put in array, object, function, be recursive about it, use parameters, get a merged object.",
   "keywords": [
     "object",
     "function",
     "array",
     "recursive",
-    "merge"
+    "merge",
+    "parameters"
   ],
   "main": "dist/index.js",
   "dependencies": {
