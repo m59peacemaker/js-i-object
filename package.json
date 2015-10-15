@@ -1,6 +1,6 @@
 {
   "name": "i-object",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Put in array, object, function, be recursive about it, use parameters, get a merged object.",
   "keywords": [
     "object",
@@ -10,6 +10,10 @@
     "merge",
     "parameters"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/m59peacemaker/js-i-object.git"
+  },
   "main": "build/index.js",
   "dependencies": {
     "lodash": "^3.10.1"
