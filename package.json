@@ -10,7 +10,7 @@
     "merge",
     "parameters"
   ],
-  "main": "dist/index.js",
+  "main": "build/index.js",
   "dependencies": {
     "lodash": "^3.10.1"
   },
