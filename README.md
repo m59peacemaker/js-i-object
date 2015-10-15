@@ -24,7 +24,7 @@ var getObject = GetObject(options);
 
 - `options: object`
   - `iterateProps: boolean, false` | will also interact with object properties and flatten objects
-- **returns**: `object`
+- **returns**: `function getObject`
 
 ### getObject(input, ...params)
 
