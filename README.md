@@ -8,32 +8,33 @@ Functions can return anything mentioned above. Recursive stuff happens and an ob
 
 ![I object!](https://raw.githubusercontent.com/m59peacemaker/js-i-object/master/i-object.jpg "I object!")
 
-## Install
-```
+## install
+
+```sh
 npm install i-object
+```
+
+## example
+
+```js
+const getObject = require('i-object')
+
+getObject([
+  {a: 123, b: 'b'},
+  () => ({a: 456})
+]) // -> {a: 456, b: 'b'}
 ```
 
 ## API
 
-```javascript
-var GetObject = require('i-object');
-var getObject = GetObject(options);
-```
+### `getObject(input, args)`
 
-### GetObject(options)
-
-- `options: object`
-  - `iterateProps: boolean, false` | will also interact with object properties and flatten objects
-- **returns**: `function getObject`
-
-### getObject(input, ...params)
-
-- `input: object, function, array` | Input to be used to find objects.
-- `...params`: Any amount of anything that will be passed into functions within `input`.
-- **returns**: `object`
+- `input: object, function, array` input to be used to find objects
+- `args: []`: functions found within `input` will be called with these arguments
+- **returns**: `object` duh
 
 See [tests](https://github.com/m59peacemaker/js-i-object/blob/master/test/index.js).
 
-## License
+## license
 
-[VOL](https://github.com/m59peacemaker/js-i-object/blob/master/LICENSE-VOL.txt)
+[VOL](https://github.com/m59peacemaker/js-i-object/blob/master/LICENSE-VOL)
