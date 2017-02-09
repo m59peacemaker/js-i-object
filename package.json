@@ -1,6 +1,6 @@
 {
   "name": "i-object",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Put in array, object, function, be recursive about it, use parameters, get a merged object.",
   "keywords": [
     "object",
@@ -24,7 +24,7 @@
     "type": "git",
     "url": "https://github.com/m59peacemaker/js-i-object.git"
   },
-  "license": "VOL",
+  "license": "CC0-1.0",
   "dependencies": {
     "deepmerge": "^1.3.0"
   },
