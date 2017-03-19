@@ -1,6 +1,6 @@
 {
   "name": "i-object",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Put in array, object, function, be recursive about it, use parameters, get a merged object.",
   "keywords": [
     "object",
