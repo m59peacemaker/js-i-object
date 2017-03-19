@@ -34,7 +34,3 @@ getObject([
 - **returns**: `object` duh
 
 See [tests](https://github.com/m59peacemaker/js-i-object/blob/master/test/index.js).
-
-## license
-
-[VOL](https://github.com/m59peacemaker/js-i-object/blob/master/LICENSE-VOL)
